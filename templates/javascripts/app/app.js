@@ -6,5 +6,5 @@ angular.module('docsApp', ['docsApp.filters', 'docsApp.services', 'docsApp.direc
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/faqs', {templateUrl: 'partials/faqs.html', controller: 'FAQsCtrl'});
     $routeProvider.when('/documentation/:currentSection', {templateUrl: 'partials/documentation/index.html', controller: 'DocumentationCtrl'});
-    $routeProvider.otherwise({redirectTo: '/'});
+    $routeProvider.otherwise({redirectTo: '/documentation/overview'});
 }])
