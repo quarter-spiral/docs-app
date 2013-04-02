@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link rel="stylesheet" href="stylesheets/app.css"/>
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,800">
@@ -45,15 +43,19 @@
             <ul>
               <li>
                   <a href="#/documentation/overview"><i class="icon-book"></i> Documentation</a>
-              </li>  
-              <li>
+              </li>
+              <!-- <li>
                   <a href="#/faqs"><i class="icon-question-sign"></i> FAQs</a>
               </li>
+            -->
             </ul>
 
             <ul class="pull-right">
               <li>
-                  <a href="http://quarterspiral.com" target="new"><i class="icon-home"></i> Quarter Spiral</a>
+                  <a href="http://quarterspiral.com" target="new"><i class="icon-arrow-right"></i> Friend Bar Us</a>
+              </li>
+              <li>
+                  <a href="http://quarterspiral.com" target="new"><i class="icon-arrow-right"></i> Quarter Spiral</a>
               </li>
             </ul>
 
@@ -64,27 +66,31 @@
       </div> <!-- /#topbar -->
 
 
+      
       <div id="header">
 
         <div class="container">
 
-          <a href="#/games/{{game.uuid}}" class="brand"><i class="icon-dashboard"></i> Documentation!</a>
+          <a href="#/" class="brand"><i class="icon-dashboard"></i> Documentation!</a>
 
-          <a href="javascript:;" class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <i class="icon-reorder"></i>
-              </a>
 
           <div class="nav-collapse">
             <ul id="main-nav" class="nav pull-right">
-              <li class="nav-icon" ng-class="{active: currentUrl == ''}">
-                <a href="#">
-                  <i class="icon-home"></i>
-                  <span>Overview</span>
-                </a>
+              <li>
+                  <a href="#/documentation/overview" ng-class="{active: currentUrl == ''}"><i class="icon-book"></i> Overview</a>
               </li>
-
-
-
+              <li>
+                  <a href="#/documentation/overview" ng-class="{active: currentUrl == ''}"><i class="icon-book"></i> Tutorials</a>
+              </li>
+              <li>
+                  <a href="#/documentation/overview" ng-class="{active: currentUrl == ''}"><i class="icon-book"></i> SDKs</a>
+              </li> 
+              <li>
+                  <a href="#/documentation/overview" ng-class="{active: currentUrl == ''}"><i class="icon-book"></i> APIs</a>
+              </li>  
+              <li>
+                  <a href="#/faqs" ng-class="{active: currentUrl == ''}"><i class="icon-question-sign"></i> FAQs</a>
+              </li>
 
             </ul>
 

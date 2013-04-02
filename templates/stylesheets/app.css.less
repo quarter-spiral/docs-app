@@ -1,5 +1,3 @@
-@import "mixins";
-
 /* app css stylesheet */
 
 
@@ -23,90 +21,12 @@ h2 {
   }
 }
 
-
-
-
-#header .brand {
-  position: relative;
-  top: 24px;
-  display: block;
-  overflow: hidden;
-  width: auto !important;
-  height: 32px;
-  line-height: 32px !important;
-  margin: 0px 0px 0px 0px !important;
-  color: #FFF;
-  font-size: 18px;
-  font-weight: normal !important;
-  background: none !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  &:hover {
-    text-decoration:none;
-  }
-  i {
-    font-size: 130%;
-    vertical-align: 0px;
-    margin-right: 15px;
-  }
-}
-
-
-table {
-  &.stat-table {
-    span {
-      font-size: 70%;
-      vertical-align: bottom;
-      &.plus {
-        color:#66DD00;
-      }
-      &.minus {
-        color:red;
-      }
-    }
-  }
-}
-
 .tip {
   color:#999;
 }
 
-
-p.large {
-  font-size: 1.2em;
-  line-height: 1.5em;
-}
-
-.coming-soon {
-  &, .full {
-  //color:#AAA !important;
-  }
-}
-
-
-.graph-placeholder {
-  width:100%;
-  height:350px;
-  background-color:#EEE;
-  .box-shadow(0px, 0px, 2px, rgba(0,0,0,0.8));
-}
-
-.graph {
-  height:350px;
-
-}
-
-.mini-graph-placeholder {
-  width:100%;
-  height:120px;
-  line-height:120px;
-  text-align:center;
-  background-color:#EEE;
-  .box-shadow(0px, 0px, 2px, rgba(0,0,0,0.8));
-}
-
-
-.mini-graph {
-  height:120px;
+#header {
+  display:none;
 }
 
 
@@ -186,5 +106,69 @@ p.large {
      -moz-background-size: @size;
        -o-background-size: @size;
           background-size: @size;
+}
+
+.backgroundSize(@horizontal, @vertical) {
+  // used by the backgorund tiles in .tile
+  -moz-background-size: @horizontal @vertical;  
+  -o-background-size: @horizontal @vertical;  
+  -webkit-background-size: @horizontal @vertical;   
+  background-size: @horizontal @vertical; 
+}
+
+
+.transition(@property) {
+  transition-property: @property;
+  transition-timing-function: linear;
+  -moz-transition-property: @property;
+  -moz-transition-timing-function: linear;
+  -webkit-transition-property: @property;
+  -webkit-transition-timing-function: linear;
+  -o-transition-property: @property;
+  -o-transition-timing-function: linear;
+}
+
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.box-shadow(@vOffset, @hOffset, @blur, @color) {
+  -moz-box-shadow: @vOffset @hOffset @blur @color;
+  -webkit-box-shadow: @vOffset @hOffset @blur @color;
+  box-shadow: @vOffset @hOffset @blur @color;
+}
+
+.text-shadow(@vOffset, @hOffset, @blur, @color) {
+  -moz-text-shadow: @vOffset @hOffset @blur @color;
+  -webkit-text-shadow: @vOffset @hOffset @blur @color;
+  text-shadow: @vOffset @hOffset @blur @color;
+}
+
+.rotate(@angle) {
+  transform:rotate(@angle);
+  -ms-transform:rotate(@angle); /* IE 9 */
+  -moz-transform:rotate(@angle); /* Firefox */
+  -webkit-transform:rotate(@angle); /* Safari and Chrome */
+  -o-transform:rotate(@angle); /* Opera */
+}
+
+.gradient(@colourTop: rgb(255,255,255),@colourBottom: rgb(0,0,0)) {
+  background-image: linear-gradient(bottom, @colourBottom 0%, @colourTop 100%);
+  background-image: -o-linear-gradient(bottom, @colourBottom 0%, @colourTop 100%);
+  background-image: -moz-linear-gradient(bottom, @colourBottom 0%, @colourTop 100%);
+  background-image: -webkit-linear-gradient(bottom, @colourBottom 0%, @colourTop 100%);
+  background-image: -ms-linear-gradient(bottom, @colourBottom 0%, @colourTop 100%);
+}
+
+.noSelection() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
